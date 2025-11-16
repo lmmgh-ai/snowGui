@@ -4,7 +4,7 @@ local lumenGui = require("lumenGui")
 local debugGraph = lumenGui.debugGraph
 local CustomPrint = lumenGui.CustomPrint
 local gui = lumenGui:new()
-
+--
 --初始化
 function love.load(...)
     debugGraph:load(...)
@@ -115,8 +115,8 @@ function love.load(...)
                         { text = "text" },
                     },
                     item_on_click = function(self, count, text) --元素点击事件
-                        local view = require("view." .. text)
-                        print(s2g.scene_gui:add_view(view:new()))
+                       
+                        print(s2g.scene_gui:add_view(gui:load_layout({ type = text })))
                     end
                 }
             },
@@ -133,8 +133,8 @@ function love.load(...)
                         { text = "gravity_layout" },
                     },
                     item_on_click = function(self, count, text) --元素点击事件
-                        local view = require("layout." .. text)
-                        print(s2g.scene_gui:add_view(view:new()))
+                        
+                        print(s2g.scene_gui:add_view(gui:load_layout({ type = text })))
                     end
                 }
             },
@@ -153,8 +153,8 @@ function love.load(...)
                         { text = "window" },
                     },
                     item_on_click = function(self, count, text) --元素点击事件
-                        local view = require("container." .. text)
-                        print(s2g.scene_gui:add_view(view:new()))
+                        
+                        print(s2g.scene_gui:add_view(gui:load_layout({ type = text })))
                     end
                 }
             }

@@ -107,7 +107,7 @@ local function createAdvancedSandbox(env)
         love = {
             graphics = love.graphics,
         },
-        gui = require("gui"):new(),
+        gui = require(lumenGui_path .. ".gui"):new(),
         File = File, --文件系统
         require = require,
         dump = dump,
