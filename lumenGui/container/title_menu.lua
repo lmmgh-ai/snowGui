@@ -1,4 +1,4 @@
-local view = require (lumenGui_path .. ".view.view")
+local view = require(lumenGui_path .. ".view.view")
 local title_menu = view:new()
 title_menu.__index = title_menu
 function title_menu:new(tab)
@@ -246,12 +246,13 @@ function title_menu:on_hover()
     -- print("获取焦点")
 end
 
-function title_menu:off_hover()
-    -- print("失去焦点")
-    --清除所有状态
-    self:empty()
+if love.system.getOS() == "Windows" then
+    function title_menu:off_hover()
+        -- print("失去焦点")
+        --清除所有状态
+        self:empty()
+    end
 end
-
 --清除所有状态
 function title_menu:empty()
     --清空所有扩展并将所有扩展点击清零
