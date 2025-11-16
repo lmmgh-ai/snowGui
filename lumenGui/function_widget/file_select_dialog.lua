@@ -1,5 +1,5 @@
-local dialog = require("container.dialog")
-local File = require "libs.nativefs"
+local dialog = require(lumenGui_path .. ".container.dialog")
+local File = require (lumenGui_path .. ".libs.nativefs")
 --
 local file_select_dialog = dialog:new()
 --并非继承view而是继承window

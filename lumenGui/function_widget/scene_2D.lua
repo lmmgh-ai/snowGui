@@ -1,6 +1,6 @@
-local camera     = require("./libs.Camera.Camera")
+local camera     = require(lumenGui_path .. ".libs.Camera.Camera")
 ---
-local view       = require "view.view"
+local view       = require(lumenGui_path .. ".view.view")
 local scene_2D   = view:new()
 scene_2D.__index = scene_2D
 function scene_2D:new(tab)

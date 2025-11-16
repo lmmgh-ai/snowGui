@@ -1,4 +1,4 @@
-local view = require "view.view"
+local view = require(lumenGui_path .. ".view.view")
 local border_container = view:new()
 border_container.__index = border_container
 --[[

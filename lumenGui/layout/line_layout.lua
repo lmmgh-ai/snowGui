@@ -1,4 +1,4 @@
-local view = require "view.view"
+local view = require (lumenGui_path .. ".view.view")
 local line_layout = view:new()
 line_layout.__index = line_layout
 

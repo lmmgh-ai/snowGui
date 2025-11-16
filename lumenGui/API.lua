@@ -1,48 +1,53 @@
+--设置包索引
+if lumenGui_path == nil then
+    lumenGui_path = (...):match("(.-)[^%.]+$")
+end
+
+lumenGui_FILE_PATH       = debug.getinfo(1, 'S').source:match("^@(.+)/")
+lumenGui_FILE_PATH       = lumenGui_FILE_PATH == nil and "" or lumenGui_FILE_PATH
 --font
-local callerPath         = debug.getinfo(1, "S").source:sub(2)
-local callerDir          = callerPath:match("(.*[/\\])") or "./"
-ChineseFont              = (callerDir .. "font/YeZiGongChangTangYingHei-2.ttf")
+ChineseFont              = (lumenGui_path .. "/font/YeZiGongChangTangYingHei-2.ttf")
 --字体文件路径全局索引方便加载
 --view
-local view               = require("view.view")
-local button             = require("view.button")
-local switch_button      = require("view.switch_button")
-local slider             = require("view.slider")
-local list               = require("view.list")
-local text               = require("view.text")
-local edit_text          = require("view.edit_text")
-local input_text         = require("view.input_text")
-local image              = require("view.image")
-local select_button      = require("view.select_button")
-local select_menu        = require("view.select_menu")
-local dialog             = require("container.dialog")
+local view               = require(lumenGui_path .. ".view.view")
+local button             = require(lumenGui_path .. ".view.button")
+local switch_button      = require(lumenGui_path .. ".view.switch_button")
+local slider             = require(lumenGui_path .. ".view.slider")
+local list               = require(lumenGui_path .. ".view.list")
+local text               = require(lumenGui_path .. ".view.text")
+local edit_text          = require(lumenGui_path .. ".view.edit_text")
+local input_text         = require(lumenGui_path .. ".view.input_text")
+local image              = require(lumenGui_path .. ".view.image")
+local select_button      = require(lumenGui_path .. ".view.select_button")
+local select_menu        = require(lumenGui_path .. ".view.select_menu")
+local dialog             = require(lumenGui_path .. ".container.dialog")
 --layout
-local line_layout        = require("layout.line_layout")
-local gravity_layout     = require("layout.gravity_layout")
-local grid_layout        = require("layout.grid_layout")
-local frame_layout       = require("layout.frame_layout")
+local line_layout        = require(lumenGui_path .. ".layout.line_layout")
+local gravity_layout     = require(lumenGui_path .. ".layout.gravity_layout")
+local grid_layout        = require(lumenGui_path .. ".layout.grid_layout")
+local frame_layout       = require(lumenGui_path .. ".layout.frame_layout")
 --container
-local title_menu         = require("container.title_menu")
-local tab_control        = require("container.tab_control")
-local border_container   = require("container.border_container")
-local fold_container     = require("container.fold_container")
-local slider_container   = require("container.slider_container")
-local window             = require("container.window")
-local tree_manager       = require("container.tree_manager")
+local title_menu         = require(lumenGui_path .. ".container.title_menu")
+local tab_control        = require(lumenGui_path .. ".container.tab_control")
+local border_container   = require(lumenGui_path .. ".container.border_container")
+local fold_container     = require(lumenGui_path .. ".container.fold_container")
+local slider_container   = require(lumenGui_path .. ".container.slider_container")
+local window             = require(lumenGui_path .. ".container.window")
+local tree_manager       = require(lumenGui_path .. ".container.tree_manager")
 --function_widget
-local scene_2D_guiEditor = require("function_widget.scene_2D_guiEditor")
-local scene_2D           = require("function_widget.scene_2D")
-local sandbox            = require("function_widget.sandbox")
-local file_select_dialog = require("function_widget.file_select_dialog")
+local scene_2D_guiEditor = require(lumenGui_path .. ".function_widget.scene_2D_guiEditor")
+local scene_2D           = require(lumenGui_path .. ".function_widget.scene_2D")
+local sandbox            = require(lumenGui_path .. ".function_widget.sandbox")
+local file_select_dialog = require(lumenGui_path .. ".function_widget.file_select_dialog")
 --libs
-local Camera             = import "libs.Camera.Camera"
-local Color              = import "libs.Color.Color"
-local events_system      = import("libs.events_system")
-local font_manger        = import "libs.font_manger" --单例模式
-local CustomPrint        = import "libs.CustomPrint"
-local debugGraph         = import "libs.debugGraph"
-local nativefs           = import "libs.nativefs"
-local fun                = import "fun"
+local Camera             = require(lumenGui_path .. ".libs.Camera.Camera")
+local Color              = require(lumenGui_path .. ".libs.Color.Color")
+local events_system      = require(lumenGui_path .. ".libs.events_system")
+local font_manger        = require(lumenGui_path .. ".libs.font_manger") --单例模式
+local CustomPrint        = require(lumenGui_path .. ".libs.CustomPrint")
+local debugGraph         = require(lumenGui_path .. ".libs.debugGraph")
+local nativefs           = require(lumenGui_path .. ".libs.nativefs")
+local fun                = require(lumenGui_path .. ".libs.fun")
 --
 local API                = {
     view = view,

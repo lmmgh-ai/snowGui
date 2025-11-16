@@ -1,4 +1,4 @@
-local view = require "view.view"
+local view = require(lumenGui_path .. ".view.view")
 local image = view:new()
 image.__index = image
 
@@ -18,7 +18,7 @@ image.SCALE_TYPES = {
 if not _G.image_buffer then
     --首次加载
     _G.image_buffer = setmetatable({}, {})
-    local base64_icon = require("icon")
+    local base64_icon = require(lumenGui_path .. ".icon")
     --加载默认图片
     local decodedData = love.data.decode("data", "base64", base64_icon)
     -- 创建ImageData

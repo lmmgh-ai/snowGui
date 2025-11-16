@@ -1,4 +1,4 @@
-local view = require "view.view"
+local view = require(lumenGui_path .. ".view.view")
 local sandbox = view:new()
 sandbox.__index = sandbox
 function sandbox:new(tab)

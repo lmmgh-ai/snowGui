@@ -1,4 +1,4 @@
-local view = require "view.view"
+local view = require (lumenGui_path .. ".view.view")
 local slider_container = view:new()
 slider_container.__index = slider_container
 function slider_container:new(tab)

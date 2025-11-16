@@ -4,7 +4,7 @@ Dialog/Popup 控件 for lmgui3.1
 用法示例见底部
 ]]
 
-local view = require("view.view")
+local view = require(lumenGui_path .. ".view.view")
 
 local dialog = view:new()
 dialog.__index = dialog

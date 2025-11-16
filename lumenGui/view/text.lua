@@ -1,4 +1,4 @@
-local view = require "view.view"
+local view = require (lumenGui_path .. ".view.view")
 local text = view:new()
 text.__index = text
 function text:new(tab)

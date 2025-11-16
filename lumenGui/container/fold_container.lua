@@ -1,4 +1,4 @@
-local view = require "view.view"
+local view = require (lumenGui_path .. ".view.view")
 local fold_container = view:new()
 fold_container.__index = fold_container
 function fold_container:new(tab)

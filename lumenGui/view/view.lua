@@ -5,7 +5,7 @@
 事件:2025
 ]]
 
-local color = import("./libs.Color.Color")
+local color = require(lumenGui_path .. ".libs.Color.Color")
 
 -- 基础view类
 local view = {

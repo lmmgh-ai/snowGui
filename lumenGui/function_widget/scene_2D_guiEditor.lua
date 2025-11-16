@@ -1,6 +1,6 @@
-local camera               = require("./libs.Camera.Camera")
+local camera               = require(lumenGui_path .. ".libs.Camera.Camera")
 ---
-local scene_2D             = require("function_widget.scene_2D")
+local scene_2D             = require(lumenGui_path .. ".function_widget.scene_2D")
 local scene_2D_guiEditor   = scene_2D:new()
 scene_2D_guiEditor.__index = scene_2D_guiEditor
 function scene_2D_guiEditor:new(tab)
@@ -51,12 +51,12 @@ function scene_2D_guiEditor:init()
     --local x, y = self:get_world_Position(self.x, self.y)
 
     --print(123)
-    self.scene_gui = require("function_widget.scene_gui") --初始场景gui管理器
+    self.scene_gui = require(lumenGui_path .. ".function_widget.scene_gui") --初始场景gui管理器
     print(self.scene_gui)
     --   print(self.scene_gui.events_system, self.events_system)
     --
-    local button = require("view.button")
-    local line_layout = require("layout.line_layout")
+    local button = require(lumenGui_path .. ".view.button")
+    local line_layout = require(lumenGui_path .. ".layout.line_layout")
     local scene_gui = self.scene_gui
     for i = 1, 10 do
         local x = love.math.random(0, 400)

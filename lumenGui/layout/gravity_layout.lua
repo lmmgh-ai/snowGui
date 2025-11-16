@@ -1,4 +1,4 @@
-local view = require "view.view"
+local view = require (lumenGui_path .. ".view.view")
 local gravity_layout = view:new()
 gravity_layout.__index = gravity_layout
 

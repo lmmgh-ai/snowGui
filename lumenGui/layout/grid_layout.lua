@@ -1,4 +1,4 @@
-local view = require "view.view"
+local view = require (lumenGui_path .. ".view.view")
 local grid_layout = view:new()
 grid_layout.__index = grid_layout
 

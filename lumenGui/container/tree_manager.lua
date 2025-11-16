@@ -1,4 +1,4 @@
-local view = require "view.view"
+local view = require (lumenGui_path .. ".view.view")
 local tree_manager = view:new()
 
 tree_manager.__index = tree_manager

@@ -1,4 +1,4 @@
-local view = require "view.view"
+local view = require (lumenGui_path .. ".view.view")
 local utf8 = require("utf8")
 utf8.sub = function(str, start_pos, end_pos)
     local len = utf8.len(str)

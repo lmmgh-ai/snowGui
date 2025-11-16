@@ -4,8 +4,15 @@
 作者:北极企鹅
 时间:2025
 ]]
+--设置包索引
+if lumenGui_path == nil then
+	lumenGui_path = (...):match("(.-)[^%.]+$")
+end
+
+lumenGui_FILE_PATH = debug.getinfo(1, 'S').source:match("^@(.+)/")
+lumenGui_FILE_PATH = lumenGui_FILE_PATH == nil and "" or lumenGui_FILE_PATH
 --引用外部索引 尽量降低耦合
-local API = import("API")
+local API = require(lumenGui_path .. ".API")
 local events_system = API.events_system
 --字体管理 单例模式
 local font_manger = API.font_manger

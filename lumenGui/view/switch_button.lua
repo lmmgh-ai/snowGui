@@ -1,4 +1,4 @@
-local view = require "view.view"
+local view = require (lumenGui_path .. ".view.view")
 local switch_button = view:new()
 switch_button.__index = switch_button
 --

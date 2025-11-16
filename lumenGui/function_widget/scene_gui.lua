@@ -1,4 +1,4 @@
-local gui = require("gui")
+local gui = require(lumenGui_path .. ".gui")
 local scene_gui = gui:new()
 --
 --为操作状态添加更多状态
