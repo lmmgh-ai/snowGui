@@ -5,6 +5,8 @@
 --简陋的视图编辑器(待有优化)
 --require "experiment.test2"
 --ai编写的视图编辑器
-require "experiment.test3"
+--require "experiment.test3"
+--ai编写的视图属性编辑器
+require "experiment.test4"
 --在编写其他控件时临时使用的文件
 --require("experiment.test99")
