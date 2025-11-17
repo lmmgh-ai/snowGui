@@ -119,6 +119,7 @@ function tree_manager:slider_init()
     local v_slider = self.v_slider
     local h_slider = self.h_slider
     --竖向滑块
+    --print(self.height, self.contentHeight)
     if self.height < self.contentHeight then
         v_slider.x = self.x + self.width - bar_wh
         v_slider.y = self.y
