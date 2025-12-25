@@ -12,6 +12,7 @@ snowGui (lumenGui/lmGui) 是基于 LÖVE2D 开发的轻量级 GUI 框架，提�
 - [架构文档 (Architecture)](./ARCHITECTURE.md) - 系统架构和技术细节
 - [实践示例 (Examples)](./EXAMPLES.md) - 完整的代码示例和最佳实践
 - [可视化架构图 (Diagrams)](./DIAGRAMS.md) - ASCII 图表展示框架架构
+- [动画系统指南 (Animation)](./ANIMATION.md) - 为 view 添加动画功能 🎬
 
 ## ✨ 特性 (Features)
 
